@@ -202,7 +202,7 @@ RestInPlaceEditor.forms =
         false
       @$element.find("input").keyup (e) =>
         @abort() if e.keyCode == ESC_KEY
-      @$element.find("input").blur => @abort()
+      @$element.find("input").blur => @update() # mkeenan changed
 
     getValue : ->
       @$element.find("input").val()
